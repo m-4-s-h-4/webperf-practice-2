@@ -8,7 +8,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lighthouse": "lighthouse http://localhost:4174 --view"
+    "lighthouse": "lighthouse http://localhost:4175 --view"
   },
   "keywords": [],
   "author": "",
