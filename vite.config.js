@@ -3,6 +3,8 @@ import cssnanoPlugin from 'cssnano';
 import { visualizer } from 'rollup-plugin-visualizer';
 import { terser } from 'rollup-plugin-terser';
 import imagemin from 'vite-plugin-imagemin';
+import fs from 'fs';
+
 
 export default defineConfig({
   plugins: [
@@ -42,10 +44,16 @@ export default defineConfig({
       webp: {
         quality: 75,
       },
-    })
+    }),
   ],
-  root: '.', 
-  build: {
-    outDir: 'dist',
+    server: {
+      https: {
+        key: fs.readFileSync('./localhost+2-key.pem'),
+        cert: fs.readFileSync('./localhost+2.pem'), 
   },
-});
+    },
+    root: '.', 
+    build: {
+      outDir: 'dist',
+    },
+  });

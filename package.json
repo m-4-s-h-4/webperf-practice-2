@@ -14,6 +14,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@vitejs/plugin-basic-ssl": "github:vitejs/vite-plugin-basic-ssl",
     "imagemin": "^8.0.1",
     "imagemin-webp": "^8.0.0",
     "lighthouse": "^11.7.0",

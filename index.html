@@ -8,6 +8,7 @@
         <meta name="author" content="">
 
         <title>Crispy Kitchen - Bootstrap 5 HTML Template</title>
+        <link rel="manifest" href="/manifest.json">
 
         <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" as="style" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet" onload="this.onload=null;this.rel='stylesheet'">
@@ -628,6 +629,18 @@ https://www.tooplate.com/view/2129-crispy-kitchen
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>
         <script src="js/custom.js"></script>
+        
+        <script>
+          if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+              navigator.serviceWorker.register('/sw.js').then(registration => {
+                console.log('Service Worker registered with scope:', registration.scope);
+              }, err => {
+                console.log('Service Worker registration failed:', err);
+              });
+            });
+          }
+        </script>
 
     </body>
 </html>

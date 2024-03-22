@@ -7,4 +7,4 @@
 7. Added `fetchpriority="high"`
 8. Added convertion images to the WebP
 9. Eliminated render-blocking resources by preloading critical fonts, using crossorigin for preloaded fonts from different origins, combined Google Fonts requests and defered non-critical CSS or inline critical styles in the `<head>`
-   ![alt text](<Screenshot 2024-03-21 at 11.57.11.png>)
+   ![alt text](<Screenshot 2024-03-21 at 11.57.11-1.png>)
