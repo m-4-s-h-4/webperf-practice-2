@@ -554,19 +554,16 @@ https://www.tooplate.com/view/2129-crispy-kitchen
         </footer>
 
         <!-- Modal -->
-        <div class="modal fade" id="BookingModal" tabindex="-1" aria-labelledby="BookingModal" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h3 class="mb-0">Reserve a table</h3>
-
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-
-                    <div class="modal-body d-flex flex-column justify-content-center">
-                        <div class="booking">
-
-                            <form class="booking-form row" role="form" action="#" method="post">
+<div class="modal fade" id="BookingModal" tabindex="-1" aria-labelledby="BookingModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="mb-0">Reserve a table</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex flex-column justify-content-center">
+                <div class="booking">
+                    <form class="booking-form row" role="form" action="/submit-reservation" method="post">
                                 <div class="col-lg-6 col-12">
                                     <label for="name" class="form-label">Full Name</label>
 
@@ -621,13 +618,12 @@ https://www.tooplate.com/view/2129-crispy-kitchen
                             </form>
                         </div>
                     </div>
-
                     <div class="modal-footer"></div>
-
                 </div>
-
             </div>
         </div>
+        </div>
+        </form>
 
         <!-- JAVASCRIPT FILES -->
         <script src="js/jquery.min.js"></script>
@@ -646,5 +642,34 @@ https://www.tooplate.com/view/2129-crispy-kitchen
           }
         </script>
 
+        <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const form = document.querySelector('.booking-form');
+                    form.addEventListener('submit', function(e) {
+                        e.preventDefault(); 
+                        const formData = new FormData(this);
+                        const jsonFormData = Object.fromEntries(formData.entries());
+
+                        fetch('http://localhost:3000/submit-reservation', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify(jsonFormData),
+                        })
+                        .then(response => response.text())
+                        .then(data => {
+                            alert(data); 
+                        })
+                        .catch((error) => {
+                            console.error('Error:', error);
+                            alert('Failed to save reservation.');
+                        });
+                    });
+                });
+
+            </script>
+            
+    
     </body>
 </html>
