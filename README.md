@@ -1,10 +1,11 @@
-1. Added Vite
-2. Added bundle analysis
-3. Added Lighthouse to build step
-4. Added web vitals
-5. Added cssnano
-6. Added lazy loading to images
-7. Added `fetchpriority="high"`
-8. Added convertion images to the WebP
-9. Eliminated render-blocking resources by preloading critical fonts, using crossorigin for preloaded fonts from different origins, combined Google Fonts requests and defered non-critical CSS or inline critical styles in the `<head>`
-   ![alt text](<Screenshot 2024-03-21 at 11.57.11.png>)
+1. Created `nextjs` branch from `main`
+2. Set up Next.js app (https://nextjs.org/docs/getting-started/installation )
+   3.Added routes + .tsx files for individual pages (Home, Story, Menu, Our Updates, Contact) from the template
+3. Use built-in capabilities:
+
+- Image component
+- Code splitting (routing and <Link> components for menu)
+  (aditionally moved navbar and footer to `layout.tsx` to prevent mentioning each time)
+
+5. Setup deployment to Vercel
+6. Add readme file explaining what was done + commit + push
