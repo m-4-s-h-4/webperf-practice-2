@@ -1,7 +1,4 @@
 import Link from "next/link";
-import "../globals.css";
-import "../css/bootstrap-icons.css";
-import "../css/bootstrap.min.css";
 
 function Navbar() {
   return (
