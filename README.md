@@ -7,5 +7,5 @@
 - Code splitting (routing and <Link> components for menu)
   (aditionally moved navbar and footer to `layout.tsx` to prevent mentioning each time)
 
-5. Setup deployment to Vercel
+5. Setup deployment to Vercel `https://webperf-practice-2-one.vercel.app/`
 6. Add readme file explaining what was done + commit + push
