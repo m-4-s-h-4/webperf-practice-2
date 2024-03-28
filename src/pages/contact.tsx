@@ -3,6 +3,7 @@ import ContactForm from "./components/ContactForm";
 function Home() {
   return (
     <main>
+      <div>test</div>
       <header className="site-header site-contact-header">
         <div className="container">
           <div className="row">
