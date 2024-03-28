@@ -13,7 +13,7 @@ interface Props {
   isLoading: boolean;
 }
 
-const CocktailList: React.FC<Props> = ({ cocktails, isLoading }) => {
+function CocktailList({ cocktails, isLoading }: Props) {
   if (isLoading) {
     return (
       <div style={{ minHeight: "60rem" }}>
@@ -52,6 +52,6 @@ const CocktailList: React.FC<Props> = ({ cocktails, isLoading }) => {
       </AutoSizer>
     </div>
   );
-};
+}
 
 export default CocktailList;

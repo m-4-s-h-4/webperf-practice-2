@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
 import axios from "axios";
-import * as Sentry from "@sentry/react";
 import SearchBar from "./components/cocktails/SearchBar";
 import CocktailList from "./components/cocktails/CocktailList";
 
@@ -23,7 +22,6 @@ const Cocktails = () => {
         setError("No cocktails found.");
       }
     } catch (error) {
-      Sentry.captureException(error);
       setError("An unexpected error occurred.");
     } finally {
       setIsLoading(false);
