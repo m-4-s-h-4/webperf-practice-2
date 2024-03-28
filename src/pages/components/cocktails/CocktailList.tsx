@@ -9,11 +9,11 @@ interface Cocktail {
 }
 
 interface Props {
-  cocktails: Cocktail[];
+  cocktails?: Cocktail[];
   isLoading: boolean;
 }
 
-function CocktailList({ cocktails, isLoading }: Props) {
+function CocktailList({ cocktails = [], isLoading }: Props) {
   if (isLoading) {
     return (
       <div style={{ minHeight: "60rem" }}>
